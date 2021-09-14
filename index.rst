@@ -40,7 +40,16 @@ Welcome to Riva End-to-end User Guide's documentation!
    :maxdepth: 2
    :caption: Riva - Dialog Manager
 
-   riva_dm
+   riva_rasa
+   riva_rasa_nlu
+   riva_rasa_dm
+   riva_rasa_actions
+   riva_rasa_domain
+   riva_rasa_config
+   riva_rasa_training
+   riva_rasa_credentials
+   riva_rasa_endpoints
+   riva_rasa_conversation_test
 
 .. toctree::
    :maxdepth: 2
@@ -56,9 +65,11 @@ Welcome to Riva End-to-end User Guide's documentation!
    riva_custom_model_tao
    riva_custom_model_tao_stt
    riva_custom_model_nemo
-   riva_custom_model_data
-   riva_custom_model_data_manifest
+   riva_custom_model_asr_data_manifest
    riva_custom_model_asr_mandarin
+   riva_custom_model_nlp_intent_slot_data
+   riva_custom_model_nlp_ner_data
+   riva_custom_model_nlp_tc_data
 
 .. toctree::
    :maxdepth: 2

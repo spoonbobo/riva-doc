@@ -3,6 +3,28 @@ Riva - Custom Model - NeMo - ASR - Mandarin
 
 This sample implements ASR of Mandarin using Nemo.
 
+.. note::
+
+    * If you wish to skip the following steps to set up the environment to train mandarin ASR model, a container is prepared which you can launch and start training immediately:
+
+    .. code-block::
+
+        docker pull nvcr.io/nvidian/sae/mandarin-asr-spoon:1.0.1
+
+    * To launch the container, run:
+
+    .. code-block::
+
+        docker run --gpus all -it --rm --shm-size=8g \
+        -p 8888:8888 -p 6006:6006 --ulimit memlock=-1 --ulimit \
+        stack=67108864 --device=/dev/snd nvcr.io/nvidian/sae/mandarin-asr-spoon:1.0.1
+
+    * Finally, run the training:
+
+    .. code-block::
+
+        python3 main.py --e <train-epoch> --g <no-of-gpus>
+
 0. Launch PyTorch container with NeMo
 -------------------------------------
 
@@ -39,20 +61,20 @@ Retrieve the audio files
     import shutil
     from tqdm import tqdm
         
-    remove manifests if already exists
+    # remove manifests if already exists
     os.chdir("/NeMo/data_aishell/wav")
     if delete_previous:
         shutil.rmtree("train")
         shutil.rmtree("test")
         shutil.rmtree("dev")
 
-    untar the audio files if you have not done this
-        wav_tars = os.listdir(os.getcwd())
-        for wav_tar in tqdm(wav_tars):
-            current_tar = os.path.join(os.getcwd(), wav_tar)
-            tar = tarfile.open(current_tar)
-            tar.extractall('.')
-            tar.close()
+    # untar the audio files if you have not done this
+    wav_tars = os.listdir(os.getcwd())
+    for wav_tar in tqdm(wav_tars):
+        current_tar = os.path.join(os.getcwd(), wav_tar)
+        tar = tarfile.open(current_tar)
+        tar.extractall('.')
+        tar.close()
 
 1.2 Build data manifest
 ~~~~~~~~~~~~~~~~~~~~~~~

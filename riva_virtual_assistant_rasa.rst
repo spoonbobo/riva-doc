@@ -105,6 +105,36 @@ Overview of RVA Rasa
         `-- tests
             `-- conversation_tests.md
 
+
+RVA-Rasa Pipeline
+~~~~~~~~~~~~~~~~~
+
+Rasa Action Server & Rasa Server
+********************************
+
+Riva & Web application
+**********************
+
+:code:`rasa-riva-weatherbot-webapp/main.py`:
+
+.. code-block:: python
+        
+    import os, sys
+
+    root_folder = (os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
+    sys.path.append(root_folder)
+
+    from config import client_config
+
+    if __name__ == '__main__':
+        if client_config["CLIENT_APPLICATION"] == "WEBAPPLICATION":
+            from client.webapplication.start_web_application import start_web_application
+            start_web_application()
+
+
+Rasa Server & Rasa Action
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Prerequisites
 -------------
 
@@ -168,7 +198,7 @@ Create a Riva config :file:`config.py`, and replace :code:`RASA_API_URL` with th
         "NLU_FALLBACK_THRESHOLD": 0.3 # When Intent's confidence/score is less than this value, intent is set to nlu_fallback
     }
 
-Create a Riva config :file:`endpoints.yml`
+3. Create a Riva config :file:`endpoints.yml`
 
 .. code-block:: bash
 
