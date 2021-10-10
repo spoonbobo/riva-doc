@@ -3,7 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. Y3E4MzY5aWc0dG01Y2hidm9sNnFkam9vajI6NDAwOWRiNWEtYzMxZi00YWU0LWExODEtZDAyMWNhZmIzZTFk
+.. Y3E4MzY5aWc0dG01Y2hidm9sNnFkam9vajI6NDAyZDM2NjUtZWJmZS00ODQwLTgwMjQtNWY2NjNkZWM5MDg0
+.. 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
 
 .. https://sphinx-tutorial.readthedocs.io/cheatsheet/
 
@@ -56,6 +57,7 @@ Welcome to Riva End-to-end User Guide's documentation!
    :caption: Riva - TTS Service
    
    riva_tts
+   riva_tts_model_arch
 
 .. toctree::
    :maxdepth: 2
@@ -70,6 +72,9 @@ Welcome to Riva End-to-end User Guide's documentation!
    riva_custom_model_nlp_intent_slot_data
    riva_custom_model_nlp_ner_data
    riva_custom_model_nlp_tc_data
+   riva_custom_model_tts_inference
+   riva_custom_model_tts_data_manifest
+   riva_custom_model_tts_mandarin
 
 .. toctree::
    :maxdepth: 2

@@ -21,7 +21,7 @@ Subtasks
 The subtasks for :code:`speech_to_text` include *dataset_convert, evaluate, export, finetune, infer, infer_onnx, train, download_specs*
 
 Sample task *download_specs*
-
+  
 .. code-block:: bash
 
     !tao speech_to_text download_specs \

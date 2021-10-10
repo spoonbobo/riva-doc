@@ -39,7 +39,8 @@ Getting started
 
 .. code-block:: bash
 
-     ./reinstall.sh 
+    cd /NeMo
+    ./reinstall.sh 
 
 .. seealso::
 
